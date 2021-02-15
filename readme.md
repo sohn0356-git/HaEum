@@ -15,6 +15,6 @@
 * Django 3.1.6
 * Python 3.7.9
 * VScode
-* [bootstarp](https://startbootstrap.com/previews/small-business)
+* [bootstarp](https://startbootstrap.com/previews/small-business), [bootstrap](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-ecommerce-website-template-ogani/)
 * [ERD](https://www.erdcloud.com/d/diGybTovtufqSvF3y)
 
