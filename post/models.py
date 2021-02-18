@@ -1,5 +1,6 @@
 from django.db import models
-import uuid
+from datetime import datetime
+import os, uuid
 
 DISCLOSURE_CHOICES = (
     (0, 'private'),
@@ -40,6 +41,7 @@ class Photo(models.Model):
     title = models.CharField(max_length=30, verbose_name='제목')
     image = models.ImageField(upload_to=image_upload_to)
     order = models.SmallIntegerField() # image numbering
+    reg_date = models.DateTimeField(verbose_name='날짜', default=datetime.now())
 
     class Meta:
         db_table = 'haeum photo'
