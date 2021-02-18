@@ -22,4 +22,6 @@ app_name = 'user'
 
 urlpatterns = [
     url(r'^$', index, name='index'),
+    url(r'^login/$', login, name='login'),
+    url(r'^logout/$', logout, name='logout'),
 ]
