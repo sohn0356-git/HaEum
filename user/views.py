@@ -48,3 +48,10 @@ def logout(request):
         del(request.session['user'])
 
     return redirect(reverse('user:index'))
+
+def mypage(request):
+    user = User.objects.filter(email=request.session.get('user'))
+    res_data = {"user" : user}
+    if request.method=="POST":
+        pass
+    return render(request, 'mypage.html', res_data)
