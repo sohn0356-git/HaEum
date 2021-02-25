@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- favicon.ico 404 (Not Found) -->
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <title>하음셀 | 슬기로운 신앙생활</title>
+    <title>하음셀 | 슬기로운 하음생활</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
-
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     {% block header %}
     {% endblock %}
 
@@ -36,6 +36,49 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="{% url 'user:index' %}"><img src="{% static 'img/logo_rabit.png' %}" alt=""></a>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__auth">
+                <a href="{% url 'user:login' %}"><i class="fa fa-user"></i> Login</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="{% url 'user:index' %}">Home</a></li>
+                <li><a href="{% url 'user:heartfield' %}">마음밭</a></li>
+                <li><a href="{% url 'user:calendar' %}">사진첩</a></li>
+                <li><a href="./blog.html">감사일기</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Shop Details</a></li>
+                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./checkout.html">Check Out</a></li>
+                        <li><a href="./blog-details.html">Blog Details</a></li>
+                    </ul>
+                </li>       
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> sohn0356@naver.com</li>
+                <li>문제 발견시 연락주세요~</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
 
     <!-- Header Section Begin -->
     <header class="header">
@@ -84,9 +127,9 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./contact.html">마음밭</a></li>
-                            <li><a href="./shop-grid.html">사진첩</a></li>
+                            <li class="active"><a href="{% url 'user:index' %}">Home</a></li>
+                            <li><a href="{% url 'user:heartfield' %}">마음밭</a></li>
+                            <li><a href="{% url 'user:calendar' %}">사진첩</a></li>
                             <li><a href="./blog.html">감사일기</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
@@ -126,7 +169,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="{% static 'img/logo_rabit.png' %}" alt=""></a>
+                            <a href="{% url 'user:index' %}"><img src="{% static 'img/logo_rabit.png' %}" alt=""></a>
                         </div>
                         <ul>
                             <li>Phone: 010.5141.4281</li>
@@ -185,6 +228,8 @@
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 
+    {% block footer %}
+    {% endblock %}
 
 
 </body>

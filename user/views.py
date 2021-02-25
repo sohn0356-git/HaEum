@@ -55,3 +55,10 @@ def mypage(request):
     if request.method=="POST":
         pass
     return render(request, 'mypage.html', res_data)
+
+def calendar(request):
+    user = User.objects.filter(email=request.session.get('user'))
+    res_data = {}
+    if user:
+        res_data['user'] = user[0]
+    return render(request, 'calendar_ex5.html', res_data)

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block header %}
+    <link href="{% static 'assets/css/fullcalendar.css' %}" rel='stylesheet' />
+    <link href="{% static 'assets/css/fullcalendar.print.css' %}" rel='stylesheet' media='print' />
+
+    <script src="{% static 'assets/js/jquery-1.10.2.js' %}" type="text/javascript"></script>
+    <script src="{% static 'assets/js/fullcalendar.js' %}" type="text/javascript"></script>
+    <link href="{% static 'assets/css/calendar.css' %}" rel='stylesheet' />
+{% endblock %}
+
+{% block contents %}
+    <div id='wrap'>
+    
+    <div id='calendar'></div>
+    
+    <div style='clear:both'></div>
+    </div>
+{% endblock %}

@@ -25,4 +25,6 @@ urlpatterns = [
     url(r'^login/$', login, name='login'),
     url(r'^logout/$', logout, name='logout'),
     url(r'^mypage/$', mypage, name='mypage'),
+    url(r'^calendar/$', calendar, name='calendar'),
+    url(r'^heartfield/$', TemplateView.as_view(template_name='heart_field.html'), name='heartfield'),
 ]
