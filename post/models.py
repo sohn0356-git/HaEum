@@ -30,6 +30,10 @@ class Post_thanks(models.Model):
     image_url = models.CharField(max_length=30, verbose_name='이미지url')
     writer = models.ForeignKey('post.board', on_delete=models.CASCADE,
                                verbose_name='게시글')
+    class Meta:
+        db_table = 'haeum thanks'
+        verbose_name = '감사열매'
+        verbose_name_plural = '감사열매'
 
 def image_upload_to(instance, filename):
     ext = filename.split('.')[-1]
@@ -48,3 +52,18 @@ class Photo(models.Model):
         verbose_name = '사진'
         verbose_name_plural = '사진'
         ordering = ['order']
+
+class Board_thanks(models.Model):
+    title = models.CharField(max_length=30, verbose_name='제목')
+    contents = models.TextField(verbose_name='내용')
+    writer = models.ForeignKey('user.User', on_delete=models.CASCADE,
+                               verbose_name='글쓴이')
+    registered_dttm = models.DateTimeField(auto_now_add=True,
+                                           verbose_name='등록시간')
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        db_table = 'thanks board'
+        verbose_name = '감사노트'
+        verbose_name_plural = '감사노트'

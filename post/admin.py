@@ -12,6 +12,11 @@ class BoardAdmin(admin.ModelAdmin):
 class Post_thanksAdmin(admin.ModelAdmin):
     list_display = ('contents', 'writer')
 
+class Board_thanksAdmin(admin.ModelAdmin):
+    list_display = ('title', 'writer')
+
 admin.site.register(Photo, PhotoAdmin)
 admin.site.register(Board, BoardAdmin)
 admin.site.register(Post_thanks, Post_thanksAdmin)
+admin.site.register(Board_thanks, Board_thanksAdmin)
+

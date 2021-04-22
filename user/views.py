@@ -62,3 +62,10 @@ def calendar(request):
     if user:
         res_data['user'] = user[0]
     return render(request, 'calendar_ex5.html', res_data)
+
+def thanks(request):
+    user = User.objects.filter(email=request.session.get('user'))
+    res_data = {}
+    if user:
+        res_data['user'] = user[0]
+    return render(request, 'thanks_note.html', res_data)

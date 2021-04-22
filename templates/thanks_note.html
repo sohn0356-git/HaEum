@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block contents %}
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static 'img/clouds.png' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>하음셀 감사노트</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Shoping Cart Section Begin -->
+    <section class="shoping-cart spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping__cart__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>제목</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>글쓴이</th>
+                                    <th>날짜</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h5>나와 함께 하시는 하나님</h5>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <h5>경주</h5>
+                                    </td>
+                                    <td>
+                                        <h5>210421</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5>오늘의 기도 응답</h5>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <h5>경주</h5>
+                                    </td>
+                                    <td>
+                                        <h5>210419</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5>나의 기도 들으시는 하나님</h5>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <h5>경주</h5>
+                                    </td>
+                                    <td>
+                                        <h5>210414</h5>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="shoping__cart__btns">
+                        <a href="#" class="primary-btn cart-btn cart-btn-right">
+                            감사나누기<span class="icon_heart_alt"></span></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Shoping Cart Section End -->
+
+    {% endblock %}

@@ -1992,6 +1992,7 @@ ol {
 
 .primary-btn.cart-btn.cart-btn-right {
 	float: right;
+	margin-right: 25px;
 }
 
 .shoping__discount {
